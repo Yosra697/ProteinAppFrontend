@@ -1,6 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { UserAuthService } from './user-auth.service';
+import {Injectable} from "@angular/core";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {UserAuthService} from "./user-auth.service";
 
 @Injectable({
   providedIn: 'root',

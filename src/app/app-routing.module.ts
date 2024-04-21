@@ -1,4 +1,4 @@
-import { componentFactoryName } from '@angular/compiler';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddNewProductComponent } from './add-new-product/add-new-product.component';

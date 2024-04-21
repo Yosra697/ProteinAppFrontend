@@ -35,6 +35,7 @@ import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { OrderDetaisComponent } from './order-detais/order-detais.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { OrderDetaisComponent } from './order-detais/order-detais.component';
       useClass:AuthInterceptor,
       multi:true
     },
-    UserService
+    UserService,
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

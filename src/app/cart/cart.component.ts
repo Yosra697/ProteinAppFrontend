@@ -9,7 +9,7 @@ import { ProductService } from '../_services/product.service';
 })
 export class CartComponent implements OnInit {
 
-  displayedColumns: string[] = ['Name', 'Description', 'Price' , 'Discounted Price' ,'Action'];
+  displayedColumns: string[] = ['Name', 'Description', 'Price' ,'Action'];
   cartDetails : any[] = [];
 
   constructor(private productService : ProductService,

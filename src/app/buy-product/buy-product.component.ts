@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { OrderDetails } from '../_model/order-details.model';
-import { Product } from '../_model/product.model';
-import { ProductService } from '../_services/product.service';
+import {Component, OnInit} from "@angular/core";
+import {Product} from "../_model/product.model";
+import {OrderDetails} from "../_model/order-details.model";
+import {ActivatedRoute, Router} from "@angular/router";
+import {ProductService} from "../_services/product.service";
+import {NgForm} from "@angular/forms";
+
 
 @Component({
   selector: 'app-buy-product',
@@ -79,7 +80,7 @@ export class BuyProductComponent implements OnInit {
     let grandTotal = 0;
     this.orderDetails.orderProductQuantityList.forEach(
       (productQuantity) => {
-        const price=this.productDetails.filter(product => product.productId === productQuantity.productId)[0].productDiscountedPrice
+        const price=this.productDetails.filter(product => product.productId === productQuantity.productId)[0].productActualPrice
         grandTotal+=price*productQuantity.quantity;
       }
     );

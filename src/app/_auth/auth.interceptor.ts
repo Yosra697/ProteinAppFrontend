@@ -1,15 +1,9 @@
-import {
-    HttpErrorResponse,
-  HttpEvent,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-} from '@angular/common/http';
-import { Router } from '@angular/router';
-import { catchError } from 'rxjs/operators';
-import { Observable, throwError } from 'rxjs';
-import { UserAuthService } from '../_services/user-auth.service';
-import { Injectable } from '@angular/core';
+import {Injectable} from "@angular/core";
+import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
+import {UserAuthService} from "../_services/user-auth.service";
+import {Router} from "@angular/router";
+import {catchError, Observable, throwError} from "rxjs";
+
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -29,7 +23,7 @@ export class AuthInterceptor implements HttpInterceptor {
     if(token){
       req = this.addToken(req, token);
     }
-    
+
 
     return next.handle(req).pipe(
         catchError(

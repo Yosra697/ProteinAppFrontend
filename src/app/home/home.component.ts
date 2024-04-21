@@ -1,10 +1,10 @@
-import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { map } from 'rxjs/operators';
-import { ImageProcessingService } from '../../../../../E-Commerce/E-Commerce/ecom-frontend/src/app/image-processing.service';
-import { Product } from '../../../../../E-Commerce/E-Commerce/ecom-frontend/src/app/_model/product.model';
-import { ProductService } from '../../../../../E-Commerce/E-Commerce/ecom-frontend/src/app/_services/product.service';
+import {Component, OnInit} from "@angular/core";
+import {ProductService} from "../_services/product.service";
+import {ImageProcessingService} from "../image-processing.service";
+import {Router} from "@angular/router";
+import {map} from "rxjs/operators";
+import {Product} from "../_model/product.model";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-home',
